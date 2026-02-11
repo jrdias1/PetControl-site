@@ -79,6 +79,7 @@ function PricingSection() {
       description: 'Para pet shops em crescimento',
       priceMonthly: 179,
       priceAnnual: 149,
+      annualTotal: true, // pagamento único anual
       features: [
         { text: 'Clientes ilimitados', included: true },
         { text: 'Lembretes via WhatsApp', included: true },
@@ -96,6 +97,7 @@ function PricingSection() {
       description: 'Para redes e franquias',
       priceMonthly: 299,
       priceAnnual: 249,
+      annualTotal: true, // pagamento único anual
       features: [
         { text: 'Clientes ilimitados', included: true },
         { text: 'Lembretes via WhatsApp', included: true },

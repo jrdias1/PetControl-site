@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO, { schemas } from '../components/SEO'
 import { 
   Heart, 
   Target, 
@@ -397,6 +398,13 @@ function CTASection() {
 export default function Sobre() {
   return (
     <>
+      <SEO 
+        title="Sobre Nós"
+        description="Conheça a Essencial Comunicação, empresa por trás do EssencialPet. Nossa missão é ajudar pet shops a crescer com pós-venda inteligente."
+        canonical="/sobre"
+        keywords="sobre EssencialPet, Essencial Comunicação, empresa sistema pet shop, quem somos"
+        schema={schemas.localBusinessSchema}
+      />
       <HeroSection />
       <OriginSection />
       <ProblemSection />

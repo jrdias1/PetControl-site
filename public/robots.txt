@@ -14,6 +14,8 @@ Allow: /preco/
 Allow: /segmentos/
 Allow: /contato/
 Allow: /demo/
+Allow: /sobre/
+Allow: /suporte/
 
 # Crawl-delay para ser gentil com os bots
 Crawl-delay: 1

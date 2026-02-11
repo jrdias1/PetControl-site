@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO, { schemas } from '../components/SEO'
 import { 
   Calendar, 
   Clock, 
@@ -78,30 +79,46 @@ export default function BlogPost() {
   const readTime = post?.readTime || '5 min'
   const author = post?.author || 'Equipe EssencialPet'
 
-  return (
-    <article className="pt-32 pb-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back link */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
-        >
-          <Link 
-            to="/blog" 
-            className="inline-flex items-center text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar para o Blog
-          </Link>
-        </motion.div>
+  // Schema de artigo para SEO
+  const articleSchema = schemas.articleSchema({
+    title,
+    description: post?.excerpt || 'Artigo do Blog EssencialPet sobre gestão de pet shops',
+    datePublished: '2026-02-10',
+    author
+  })
 
-        {/* Header */}
-        <motion.header
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="mb-8"
+  return (
+    <>
+      <SEO 
+        title={title}
+        description={post?.excerpt || 'Artigo do Blog EssencialPet sobre gestão de pet shops, dicas de fidelização e automação.'}
+        canonical={`/blog/${slug}`}
+        type="article"
+        schema={articleSchema}
+      />
+      <article className="pt-32 pb-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back link */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8"
+          >
+            <Link 
+              to="/blog" 
+              className="inline-flex items-center text-gray-600 hover:text-primary-600 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Voltar para o Blog
+            </Link>
+          </motion.div>
+
+          {/* Header */}
+          <motion.header
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mb-8"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-primary-50 text-primary-600 text-sm font-medium rounded-full">
@@ -199,6 +216,7 @@ export default function BlogPost() {
         </motion.div>
       </div>
     </article>
+    </>
   )
 }
 

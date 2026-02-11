@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO, { schemas } from '../components/SEO'
 import { 
   Check, 
   X, 
@@ -374,6 +375,13 @@ function CTASection() {
 export default function Preco() {
   return (
     <>
+      <SEO 
+        title="Preços e Planos"
+        description="Conheça os planos do EssencialPet a partir de R$67,90/mês. Starter, Pro e Enterprise. Teste grátis por 3 dias. Sem fidelidade."
+        canonical="/preco"
+        keywords="preço sistema pet shop, quanto custa software pet shop, planos EssencialPet, sistema pet shop barato"
+        schema={schemas.serviceSchema}
+      />
       <HeroSection />
       <PricingSection />
       <GuaranteesSection />

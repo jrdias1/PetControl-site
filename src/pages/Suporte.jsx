@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { 
   MessageCircle, 
   Mail, 
@@ -288,6 +289,12 @@ function CTASection() {
 export default function Suporte() {
   return (
     <>
+      <SEO 
+        title="Suporte"
+        description="Precisa de ajuda com o EssencialPet? Fale conosco via WhatsApp ou email. Suporte humanizado de segunda a sexta, das 9h às 18h."
+        canonical="/suporte"
+        keywords="suporte EssencialPet, ajuda sistema pet shop, contato suporte, atendimento"
+      />
       <HeroSection />
       <ContactCardsSection />
       <WorkingHoursSection />

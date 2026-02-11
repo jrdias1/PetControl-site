@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { 
   Calendar, 
   Clock, 
@@ -357,6 +358,12 @@ function NewsletterSection() {
 export default function Blog() {
   return (
     <>
+      <SEO 
+        title="Blog"
+        description="Dicas, estratégias e novidades para pet shops, clínicas veterinárias e banho e tosa. Aprenda a fidelizar clientes e aumentar vendas."
+        canonical="/blog"
+        keywords="blog pet shop, dicas pet shop, marketing pet shop, fidelização clientes pet, estratégias vendas pet shop"
+      />
       <HeroSection />
       <FeaturedPostsSection />
       <AllPostsSection />

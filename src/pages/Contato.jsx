@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { 
   MessageCircle, 
   Mail, 
@@ -400,6 +401,12 @@ function FAQSection() {
 export default function Contato() {
   return (
     <>
+      <SEO 
+        title="Agendar Demonstração"
+        description="Agende uma demonstração gratuita do EssencialPet. Veja na prática como automatizar o pós-venda do seu pet shop em 15 minutos."
+        canonical="/contato"
+        keywords="demonstração EssencialPet, contato pet shop, agendar demo sistema pet, falar com vendas"
+      />
       <HeroSection />
       <BenefitsBar />
       <ContactFormSection />

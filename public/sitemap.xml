@@ -3,45 +3,57 @@
   <!-- Páginas principais -->
   <url>
     <loc>https://essencialpet.com.br/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://essencialpet.com.br/funcionalidades</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://essencialpet.com.br/preco</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://essencialpet.com.br/segmentos</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://essencialpet.com.br/sobre</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://essencialpet.com.br/blog</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencialpet.com.br/contato</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://essencialpet.com.br/demo</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essencialpet.com.br/suporte</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <!-- Blog Posts -->

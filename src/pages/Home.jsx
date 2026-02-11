@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { 
   MessageCircle, 
   Zap, 
@@ -536,6 +537,12 @@ function FinalCTASection() {
 export default function Home() {
   return (
     <>
+      <SEO 
+        title="Sistema de Pós-Venda Inteligente para Pet Shop"
+        description="Automatize lembretes de recompra, antipulgas e vacinas via WhatsApp. +500 pet shops já aumentaram seu faturamento em até 40%. Teste grátis por 3 dias."
+        canonical="/"
+        keywords="sistema pet shop, software pet shop, CRM pet shop, automação pet shop, recompra automática, lembrete antipulga, pós-venda pet shop"
+      />
       <HeroSection />
       <FeaturesSection />
       <StatsSection />

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { 
   Store, 
   Stethoscope, 
@@ -390,6 +391,12 @@ function CTASection() {
 export default function Segmentos() {
   return (
     <>
+      <SEO 
+        title="Segmentos Atendidos"
+        description="EssencialPet atende pet shops, clínicas veterinárias e banho e tosa. Soluções personalizadas para cada segmento do mercado pet."
+        canonical="/segmentos"
+        keywords="sistema pet shop, software clínica veterinária, sistema banho e tosa, automação mercado pet"
+      />
       <HeroSection />
       <SegmentsSection />
       <UseCasesSection />

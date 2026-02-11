@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { 
   Bell, 
   MessageCircle, 
@@ -370,6 +371,12 @@ function CTASection() {
 export default function Funcionalidades() {
   return (
     <>
+      <SEO 
+        title="Funcionalidades"
+        description="Conheça todas as funcionalidades do EssencialPet: lembretes automáticos via WhatsApp, gestão de clientes e pets, dashboard de métricas e muito mais."
+        canonical="/funcionalidades"
+        keywords="funcionalidades pet shop, sistema gestão pet shop, lembrete automático antipulga, CRM veterinário, software banho e tosa"
+      />
       <HeroSection />
       <HowItWorksSection />
       <MainFeaturesSection />

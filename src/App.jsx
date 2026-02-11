@@ -8,6 +8,7 @@ import Segmentos from './pages/Segmentos'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Contato from './pages/Contato'
+import Sobre from './pages/Sobre'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="funcionalidades" element={<Funcionalidades />} />
           <Route path="preco" element={<Preco />} />
           <Route path="segmentos" element={<Segmentos />} />
+          <Route path="sobre" element={<Sobre />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:slug" element={<BlogPost />} />
           <Route path="contato" element={<Contato />} />

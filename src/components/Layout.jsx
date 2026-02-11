@@ -7,6 +7,7 @@ const navigation = [
   { name: 'Funcionalidades', href: '/funcionalidades' },
   { name: 'Preços', href: '/preco' },
   { name: 'Segmentos', href: '/segmentos' },
+  { name: 'Sobre', href: '/sobre' },
   { name: 'Blog', href: '/blog' },
 ]
 

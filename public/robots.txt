@@ -16,6 +16,8 @@ Allow: /contato/
 Allow: /demo/
 Allow: /sobre/
 Allow: /suporte/
+Allow: /termos/
+Allow: /privacidade/
 
 # Crawl-delay para ser gentil com os bots
 Crawl-delay: 1

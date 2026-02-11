@@ -55,6 +55,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://essencialpet.com.br/termos</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://essencialpet.com.br/privacidade</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://essencialpet.com.br/suporte</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <!-- Blog Posts -->
   <url>

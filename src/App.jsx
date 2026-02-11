@@ -10,6 +10,8 @@ import BlogPost from './pages/BlogPost'
 import Contato from './pages/Contato'
 import Sobre from './pages/Sobre'
 import Suporte from './pages/Suporte'
+import Termos from './pages/Termos'
+import Privacidade from './pages/Privacidade'
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="contato" element={<Contato />} />
           <Route path="demo" element={<Contato />} />
           <Route path="suporte" element={<Suporte />} />
+          <Route path="termos" element={<Termos />} />
+          <Route path="privacidade" element={<Privacidade />} />
         </Route>
       </Routes>
     </BrowserRouter>

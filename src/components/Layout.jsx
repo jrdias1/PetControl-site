@@ -256,8 +256,32 @@ function Footer() {
           </div>
         </div>
 
+        {/* Company Info */}
+        <div className="border-t border-white/10 mt-12 pt-8">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div>
+              <h4 className="font-semibold text-white mb-3">Essencial Comunicação</h4>
+              <p className="text-gray-400 text-sm">CNPJ: 22.185.544/0001-08</p>
+              <p className="text-gray-400 text-sm">Representante: Aldair Antonio Dias Jr</p>
+              <p className="text-gray-400 text-sm">Petrópolis – RJ</p>
+            </div>
+            <div className="md:text-right">
+              <h4 className="font-semibold text-white mb-3">Contato</h4>
+              <a href="https://wa.me/5524981375213" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-white transition-colors block">
+                WhatsApp: (24) 98137-5213
+              </a>
+              <a href="mailto:essencialcomunicacaoeinfo@gmail.com" className="text-gray-400 text-sm hover:text-white transition-colors block">
+                essencialcomunicacaoeinfo@gmail.com
+              </a>
+              <a href="https://www.instagram.com/essencial_comunicacao/" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-white transition-colors block">
+                @essencial_comunicacao
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
             © {currentYear} EssencialPet. Todos os direitos reservados.
           </p>

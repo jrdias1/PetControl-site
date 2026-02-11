@@ -1,0 +1,19 @@
+# EssencialPet - Sistema de Pós-Venda para Pet Shops
+# https://essencialpet.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://essencialpet.com.br/sitemap.xml
+
+# Diretórios públicos
+Allow: /blog/
+Allow: /funcionalidades/
+Allow: /preco/
+Allow: /segmentos/
+Allow: /contato/
+Allow: /demo/
+
+# Crawl-delay para ser gentil com os bots
+Crawl-delay: 1

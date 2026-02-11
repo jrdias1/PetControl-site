@@ -59,8 +59,9 @@ function PricingSection() {
     {
       name: 'Starter',
       description: 'Para quem está começando',
-      priceMonthly: 47,
-      priceAnnual: 39,
+      priceMonthly: 99.90,
+      priceAnnual: 67.90,
+      annualTotal: true, // pagamento único anual
       features: [
         { text: 'Até 100 clientes', included: true },
         { text: 'Lembretes via WhatsApp', included: true },
@@ -76,8 +77,8 @@ function PricingSection() {
     {
       name: 'Profissional',
       description: 'Para pet shops em crescimento',
-      priceMonthly: 97,
-      priceAnnual: 79,
+      priceMonthly: 179,
+      priceAnnual: 149,
       features: [
         { text: 'Clientes ilimitados', included: true },
         { text: 'Lembretes via WhatsApp', included: true },
@@ -93,8 +94,8 @@ function PricingSection() {
     {
       name: 'Enterprise',
       description: 'Para redes e franquias',
-      priceMonthly: 197,
-      priceAnnual: 167,
+      priceMonthly: 299,
+      priceAnnual: 249,
       features: [
         { text: 'Clientes ilimitados', included: true },
         { text: 'Lembretes via WhatsApp', included: true },
@@ -159,13 +160,20 @@ function PricingSection() {
                 <p className="text-gray-500 text-sm mb-4">{plan.description}</p>
                 <div className="flex items-end justify-center gap-1">
                   <span className="text-4xl font-display font-bold text-dark-900">
-                    R$ {annual ? plan.priceAnnual : plan.priceMonthly}
+                    R$ {(annual ? plan.priceAnnual : plan.priceMonthly).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace('.', ',')}
                   </span>
-                  <span className="text-gray-500 mb-1">/mês</span>
+                  <span className="text-gray-500 mb-1">
+                    {annual && plan.annualTotal ? '/ano' : '/mês'}
+                  </span>
                 </div>
-                {annual && (
+                {annual && !plan.annualTotal && (
                   <p className="text-sm text-gray-500 mt-2">
-                    Cobrado anualmente (R$ {plan.priceAnnual * 12})
+                    Cobrado anualmente (R$ {(plan.priceAnnual * 12).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace('.', ',')})
+                  </p>
+                )}
+                {annual && plan.annualTotal && (
+                  <p className="text-sm text-green-600 font-medium mt-2">
+                    Pagamento único anual
                   </p>
                 )}
               </div>

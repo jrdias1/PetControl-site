@@ -164,18 +164,11 @@ function PricingSection() {
                   <span className="text-4xl font-display font-bold text-dark-900">
                     R$ {(annual ? plan.priceAnnual : plan.priceMonthly).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace('.', ',')}
                   </span>
-                  <span className="text-gray-500 mb-1">
-                    {annual && plan.annualTotal ? '/ano' : '/mês'}
-                  </span>
+                  <span className="text-gray-500 mb-1">/mês</span>
                 </div>
-                {annual && !plan.annualTotal && (
-                  <p className="text-sm text-gray-500 mt-2">
-                    Cobrado anualmente (R$ {(plan.priceAnnual * 12).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace('.', ',')})
-                  </p>
-                )}
-                {annual && plan.annualTotal && (
+                {annual && (
                   <p className="text-sm text-green-600 font-medium mt-2">
-                    Pagamento único anual
+                    Pague R$ {(plan.priceAnnual * 12).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace('.', ',')} à vista (1 ano)
                   </p>
                 )}
               </div>

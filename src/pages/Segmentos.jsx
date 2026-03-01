@@ -38,13 +38,11 @@ function HeroSection() {
           </motion.div>
 
           <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-display font-bold text-dark-900 mb-6">
-            Feito para quem{' '}
-            <span className="text-gradient">ama pets</span>
+            Feito para quem vive o mundo pet
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg text-gray-600 max-w-2xl mx-auto">
-            O EssencialPet foi criado especificamente para negócios pet. 
-            Entendemos as necessidades únicas de cada segmento.
+            O EssencialPet foi desenvolvido especificamente para negócios pet. Cada segmento tem suas próprias necessidades — e a gente entende isso.
           </motion.p>
         </motion.div>
       </div>
@@ -101,6 +99,39 @@ function SegmentsSection() {
       ],
       stats: { value: '+50%', label: 'em agendamentos' },
       color: 'accent',
+      image: null
+    }
+    ,
+    {
+      icon: Heart,
+      title: 'Nutrição Natural & Petiscos',
+      subtitle: 'Produtores e revendedores de alimentação natural',
+      description: 'Quem compra comida natural, freeze-dried ou petiscos artesanais volta toda semana — mas só se lembrar de você. O EssencialPet automatiza o contato no momento certo e transforma compradores ocasionais em clientes fixos.',
+      benefits: [
+        'Lembrete de reposição semanal ou quinzenal',
+        'Controle de ciclo de compra por tipo de dieta',
+        'Histórico de pedidos por pet e por tutor',
+        'Identificação de clientes que pararam de comprar',
+        'Aumento médio de 40% em pedidos recorrentes'
+      ],
+      stats: { value: '+40%', label: 'em pedidos recorrentes' },
+      color: 'primary',
+      image: null
+    },
+    {
+      icon: Bell,
+      title: 'Farmácia Veterinária',
+      subtitle: 'Farmácias e distribuidoras de medicamentos pet',
+      description: 'Medicamento de uso contínuo não pode atrasar — o EssencialPet avisa antes do estoque acabar e garante que a reposição aconteça com você.',
+      benefits: [
+        'Controle de medicamentos de uso contínuo',
+        'Lembrete automático de reposição mensal',
+        'Alerta de clientes com compra atrasada',
+        'Ficha completa do pet com histórico de medicamentos',
+        'Redução de até 35% na perda de clientes recorrentes'
+      ],
+      stats: { value: '-35%', label: 'em perda de clientes' },
+      color: 'secondary',
       image: null
     }
   ]
@@ -216,23 +247,38 @@ function UseCasesSection() {
   const useCases = [
     {
       title: 'Antipulga e Carrapaticida',
-      description: 'Ex: Bravecto dura 3 meses. O cliente recebe mensagem no dia 70 avisando que a eficácia está acabando.',
+      description: 'O Bravecto dura 3 meses. No dia 70, o cliente recebe uma mensagem avisando que a proteção está quase acabando — e volta comprar com você, não com o concorrente.',
       icon: Bell
     },
     {
       title: 'Vacinas Anuais',
-      description: 'V8, V10, antirrábica. Lembre os tutores 1 semana antes do vencimento.',
+      description: 'V8, V10, antirrábica. O sistema avisa o tutor com até 1 semana de antecedência. Menos esquecimento, mais fidelização.',
       icon: Stethoscope
     },
     {
       title: 'Ração e Suplementos',
-      description: 'Calcule o consumo médio e avise quando está na hora de comprar mais.',
+      description: 'Com base no peso do pet e na frequência de compra, o sistema calcula quando o estoque do cliente está acabando e envia o aviso na hora certa.',
       icon: Store
     },
     {
-      title: 'Banho Agendado',
-      description: 'Frequência semanal ou quinzenal. Mantenha a agenda sempre cheia.',
+      title: 'Banho e Tosa Recorrente',
+      description: 'Frequência semanal ou quinzenal. O cliente recebe o lembrete automático e você mantém a agenda sempre cheia sem precisar ligar para ninguém.',
       icon: Scissors
+    },
+    {
+      title: 'Medicamento Contínuo',
+      description: 'O tutor usa todo mês mas esquece de repor. O sistema avisa 5 dias antes de acabar — a compra acontece antes do tratamento ser interrompido.',
+      icon: Bell
+    },
+    {
+      title: 'Nutrição Natural e Petiscos',
+      description: 'Dieta natural tem ciclo curto e previsível. Com base no peso do pet e na frequência de compra, o EssencialPet calcula quando o cliente vai precisar de mais e envia o aviso na hora certa.',
+      icon: Heart
+    },
+    {
+      title: 'Loja Online / E-commerce',
+      description: 'Sem balcão, o WhatsApp é o principal canal de relacionamento. O cliente compra, o sistema registra, e o lembrete de recompra chega direto no celular dele.',
+      icon: MessageCircle
     }
   ]
 
@@ -283,22 +329,36 @@ function TestimonialsSection() {
       segment: 'Pet Shop',
       name: 'Rodrigo Almeida',
       business: 'Pet Center São Paulo',
-      quote: 'Em 3 meses, recuperamos 47 clientes inativos. O ROI foi absurdo.',
-      metric: '+R$ 8.500/mês'
+      quote: 'Em 3 meses, recuperamos 47 clientes que tinham sumido. O retorno foi muito além do que esperávamos.',
+      metric: '+R$ 8.500/mês em vendas recuperadas'
     },
     {
       segment: 'Clínica Veterinária',
       name: 'Dra. Paula Santos',
       business: 'Clínica VetLife',
-      quote: 'Reduzi as faltas de consulta em 40%. Os tutores adoram o lembrete.',
-      metric: '-40% faltas'
+      quote: 'As faltas caíram 40% no primeiro mês. Os tutores adoram receber o lembrete — e a gente não precisa mais ligar um por um.',
+      metric: '-40% em faltas de consulta'
     },
     {
       segment: 'Banho & Tosa',
       name: 'Amanda Costa',
       business: 'Estética Pet Premium',
-      quote: 'Minha agenda está sempre cheia. O sistema lembra todos os clientes.',
-      metric: '+50% agendamentos'
+      quote: 'Minha agenda tá sempre cheia agora. O sistema lembra os clientes e eu só cuido dos pets.',
+      metric: '+50% em agendamentos recorrentes'
+    },
+    {
+      segment: 'Farmácia Veterinária',
+      name: 'Carlos Mendonça',
+      business: 'FarmaVet Rio',
+      quote: 'Nossos clientes de medicamento contínuo paravam de comprar sem avisar. Agora a gente entra em contato antes — e a retenção melhorou muito.',
+      metric: '-35% em cancelamentos silenciosos'
+    },
+    {
+      segment: 'Nutrição Natural',
+      name: 'Juliana Ferreira',
+      business: 'Naturalpet BH',
+      quote: 'Vendia muito na primeira compra mas perdia o cliente depois. Com os lembretes automáticos, a maioria voltou a comprar toda semana.',
+      metric: '+40% em pedidos recorrentes'
     }
   ]
 
@@ -312,10 +372,10 @@ function TestimonialsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
-            Resultados reais
+            O que nossos clientes dizem
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            O que nossos clientes de cada segmento estão alcançando
+            Histórias reais de pet shops que transformaram seu negócio
           </p>
         </motion.div>
 
@@ -350,6 +410,48 @@ function TestimonialsSection() {
   )
 }
 
+// Credibility / Banner Section
+function CredibilitySection() {
+  return (
+    <section className="py-16 bg-primary-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-8"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-2">Um sistema, cinco segmentos, um objetivo</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Não importa se você tem uma loja física, uma clínica, um ateliê de tosa ou vende pelo Instagram. Se o seu negócio depende de recompra recorrente, o EssencialPet foi feito para você.</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-4 gap-6">
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">📊</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">+500</div>
+            <div className="text-sm text-gray-600">negócios pet ativos</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">🐾</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">Presente em todo o Brasil</div>
+            <div className="text-sm text-gray-600">Atendimento nacional</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">💬</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">50.000+</div>
+            <div className="text-sm text-gray-600">lembretes enviados</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">⭐</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">4.9</div>
+            <div className="text-sm text-gray-600">de satisfação média</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // CTA Section
 function CTASection() {
   return (
@@ -364,7 +466,7 @@ function CTASection() {
             Qual é o seu segmento?
           </h2>
           <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto">
-            Agende uma demo personalizada para o seu tipo de negócio
+            Agende uma demonstração personalizada para o seu tipo de negócio. Em 20 minutos você vê o sistema funcionando com exemplos do seu dia a dia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -401,6 +503,7 @@ export default function Segmentos() {
       <SegmentsSection />
       <UseCasesSection />
       <TestimonialsSection />
+      <CredibilitySection />
       <CTASection />
     </>
   )

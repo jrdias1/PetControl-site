@@ -38,13 +38,11 @@ function HeroSection() {
           </motion.div>
 
           <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-display font-bold text-dark-900 mb-6">
-            Preços simples e{' '}
-            <span className="text-gradient">transparentes</span>
+            Invista menos do que uma venda recuperada por mês
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Escolha o plano ideal para o tamanho do seu pet shop. 
-            Sem taxas ocultas. Cancele quando quiser.
+            Cada plano foi pensado para um momento do seu pet shop. Sem contrato, sem pegadinha.
           </motion.p>
         </motion.div>
       </div>
@@ -58,35 +56,40 @@ function PricingSection() {
 
   const plans = [
     {
-      name: 'Starter',
-      description: 'Para quem está começando',
+      name: 'STARTER',
+      description: 'Para quem está dando os primeiros passos',
       priceMonthly: 99.90,
-      priceAnnual: 67.90,
+      priceAnnual: 79.90,
       annualTotal: true, // pagamento único anual
       features: [
-        { text: 'Até 100 clientes', included: true },
-        { text: 'Lembretes via WhatsApp', included: true },
+        { text: 'Até 200 clientes', included: true },
+        { text: 'Até 300 mensagens/mês via WhatsApp', included: true },
+        { text: 'Até 100 produtos cadastrados', included: true },
+        { text: '1 usuário', included: true },
+        { text: 'Lembretes automáticos via WhatsApp', included: true },
         { text: 'Dashboard básico', included: true },
         { text: 'Suporte por email', included: true },
         { text: 'Múltiplos usuários', included: false },
-        { text: 'API de integração', included: false },
         { text: 'Relatórios avançados', included: false },
+        { text: 'API de integração', included: false },
       ],
       cta: 'Começar Grátis',
       popular: false
     },
     {
-      name: 'Profissional',
+      name: 'PROFISSIONAL',
       description: 'Para pet shops em crescimento',
-      priceMonthly: 179,
-      priceAnnual: 149,
+      priceMonthly: 197.00,
+      priceAnnual: 157.00,
       annualTotal: true, // pagamento único anual
       features: [
-        { text: 'Clientes ilimitados', included: true },
-        { text: 'Lembretes via WhatsApp', included: true },
+        { text: 'Até 500 clientes', included: true },
+        { text: 'Até 800 mensagens/mês via WhatsApp', included: true },
+        { text: 'Até 200 produtos cadastrados', included: true },
+        { text: 'Até 3 usuários', included: true },
+        { text: 'Lembretes automáticos via WhatsApp', included: true },
         { text: 'Dashboard completo', included: true },
         { text: 'Suporte prioritário', included: true },
-        { text: 'Até 3 usuários', included: true },
         { text: 'Relatórios avançados', included: true },
         { text: 'API de integração', included: false },
       ],
@@ -94,19 +97,23 @@ function PricingSection() {
       popular: true
     },
     {
-      name: 'Enterprise',
-      description: 'Para redes e franquias',
-      priceMonthly: 299,
-      priceAnnual: 249,
+      name: 'ENTERPRISE',
+      description: 'Para redes, franquias e multi-lojas',
+      priceMonthly: 349.00,
+      priceAnnual: 279.00,
       annualTotal: true, // pagamento único anual
       features: [
         { text: 'Clientes ilimitados', included: true },
-        { text: 'Lembretes via WhatsApp', included: true },
-        { text: 'Dashboard completo', included: true },
-        { text: 'Suporte VIP + WhatsApp', included: true },
+        { text: 'Mensagens ilimitadas via WhatsApp', included: true },
+        { text: 'Produtos ilimitados', included: true },
         { text: 'Usuários ilimitados', included: true },
+        { text: 'Lembretes automáticos via WhatsApp', included: true },
+        { text: 'Dashboard completo', included: true },
+        { text: 'Suporte VIP via WhatsApp', included: true },
         { text: 'Relatórios avançados', included: true },
         { text: 'API de integração', included: true },
+        { text: 'Onboarding personalizado', included: true },
+        { text: 'Gestor de conta dedicado', included: true },
       ],
       cta: 'Falar com Vendas',
       popular: false
@@ -154,7 +161,7 @@ function PricingSection() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-sm font-semibold rounded-full">
-                  Mais popular
+                  ⭐ Mais popular
                 </div>
               )}
 
@@ -213,22 +220,22 @@ function GuaranteesSection() {
     {
       icon: Clock,
       title: '3 Dias Grátis',
-      description: 'Teste todas as funcionalidades sem compromisso.'
+      description: 'Teste todas as funcionalidades sem compromisso e sem cartão de crédito.'
     },
     {
       icon: Shield,
       title: 'Sem Fidelidade',
-      description: 'Cancele a qualquer momento, sem multas ou taxas.'
+      description: 'Cancele a qualquer momento, sem multas, sem burocracia.'
     },
     {
       icon: Users,
       title: 'Suporte Humano',
-      description: 'Time real pronto para ajudar via WhatsApp ou email.'
+      description: 'Time real pronto para ajudar via WhatsApp ou email. Sem bot.'
     },
     {
       icon: Star,
       title: 'Garantia de 30 Dias',
-      description: 'Se não gostar, devolvemos 100% do seu dinheiro.'
+      description: 'Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro.'
     }
   ]
 
@@ -265,23 +272,23 @@ function FAQSection() {
   const faqs = [
     {
       question: 'Preciso de cartão de crédito para testar?',
-      answer: 'Não! Os 3 dias de teste são completamente grátis e não pedimos cartão de crédito. Você só paga se decidir continuar após o período de teste.'
+      answer: 'Não. Os 3 dias grátis são totalmente livres de cartão. Você só informa os dados de pagamento quando decidir assinar.'
     },
     {
       question: 'Posso mudar de plano depois?',
-      answer: 'Sim! Você pode fazer upgrade ou downgrade do seu plano a qualquer momento. A diferença será calculada proporcionalmente.'
+      answer: 'Sim, a qualquer momento. Se seu pet shop crescer, você sobe de plano com um clique e paga apenas a diferença proporcional.'
     },
     {
       question: 'Como funciona o cancelamento?',
-      answer: 'Basta acessar as configurações da conta e cancelar. Não há multas, fidelidade ou burocracia. Seus dados ficam disponíveis por 30 dias após o cancelamento.'
+      answer: 'Simples e sem burocracia. Cancele direto pelo painel, sem precisar falar com ninguém. Você continua com acesso até o fim do período pago.'
     },
     {
       question: 'O preço pode aumentar?',
-      answer: 'Se você contratar o plano anual, o preço fica travado por 12 meses. Qualquer reajuste só vale para renovações futuras e avisamos com 30 dias de antecedência.'
+      answer: 'Clientes ativos são avisados com pelo menos 30 dias de antecedência antes de qualquer reajuste. Sem surpresas.'
     },
     {
       question: 'Tem desconto para múltiplas lojas?',
-      answer: 'Sim! Para redes com mais de 3 lojas, oferecemos condições especiais. Entre em contato com nosso time comercial.'
+      answer: 'Sim! Para redes com 2 ou mais unidades temos condições especiais. Fale com nosso time pelo WhatsApp e montamos uma proposta personalizada.'
     }
   ]
 
@@ -343,10 +350,10 @@ function CTASection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-            Ainda tem dúvidas?
+            Pronto para parar de perder recompras?
           </h2>
           <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto">
-            Fale com nosso time e descubra como o EssencialPet pode ajudar seu negócio
+            Mais de 500 pet shops já automatizaram o pós-venda com o EssencialPet. Comece hoje e veja os primeiros resultados ainda nesta semana.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

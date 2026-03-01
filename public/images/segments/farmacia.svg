@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+  <g fill="#F97316">
+    <rect x="60" y="50" width="80" height="160" rx="12"/>
+    <rect x="180" y="80" width="140" height="100" rx="12"/>
+  </g>
+  <text x="50%" y="85%" font-family="Inter, Arial, sans-serif" font-size="18" fill="#334155" text-anchor="middle">Farmácia — Placeholder</text>
+</svg>

@@ -33,17 +33,16 @@ function HeroSection() {
             visible: { transition: { staggerChildren: 0.1 } }
           }}
         >
-          <motion.div variants={fadeInUp} className="text-6xl mb-6">
-            🐾
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-100 rounded-full text-primary-600 text-sm font-medium mb-6">
+            🐾 Sobre Nós
           </motion.div>
 
           <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-display font-bold text-dark-900 mb-6">
-            Sobre Nós
+            Criado por quem entende de tecnologia. Para quem vive o mundo pet.
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg text-gray-600 max-w-2xl mx-auto">
-            O EssencialPet nasceu dentro da <strong className="text-primary-600">Essencial Comunicação</strong>, 
-            empresa especializada em automação estratégica, tecnologia aplicada a negócios e marketing orientado a dados.
+            O EssencialPet nasceu dentro da Essencial Comunicação, empresa especializada em automação, tecnologia aplicada a negócios e marketing orientado a dados. Foi analisando o mercado pet com olhar técnico que encontramos um problema silencioso — e caro.
           </motion.p>
         </motion.div>
       </div>
@@ -296,6 +295,48 @@ function PhilosophySection() {
   )
 }
 
+// Numbers / Credibility Section
+function NumbersSection() {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-6"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-2">O EssencialPet em números</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">(Ajuste os números para a realidade atual antes de publicar)</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-4 gap-6 mt-6">
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">📊</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">+500</div>
+            <div className="text-sm text-gray-600">negócios pet ativos no Brasil</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">💬</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">50.000+</div>
+            <div className="text-sm text-gray-600">lembretes enviados via WhatsApp</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">🐾</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">Presente em todo o país</div>
+            <div className="text-sm text-gray-600">Abrangência nacional</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="text-2xl">⭐</div>
+            <div className="font-bold text-dark-900 text-xl mt-2">4.9</div>
+            <div className="text-sm text-gray-600">de satisfação média</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // Commitment Section
 function CommitmentSection() {
   const commitments = [
@@ -357,6 +398,43 @@ function CommitmentSection() {
   )
 }
 
+// Team Section
+function TeamSection() {
+  return (
+    <section className="py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-8"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-2">Quem está por trás do EssencialPet</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Somos um time da Essencial Comunicação, empresa sediada em Petrópolis, RJ, com experiência em automação, CRM e estratégia digital para pequenos e médios negócios.</p>
+        </motion.div>
+
+        <div className="bg-white rounded-2xl p-8 shadow-sm">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <div className="font-semibold text-dark-900">Aldair Antonio Dias Jr</div>
+              <div className="text-sm text-gray-500 mb-4">Fundador — Essencial Comunicação</div>
+
+              <p className="text-gray-700">Criamos o EssencialPet porque acreditamos que pet shops merecem as mesmas ferramentas de relacionamento que grandes varejistas usam — sem a complexidade e sem o preço proibitivo.</p>
+
+              <div className="mt-6">
+                <a href="https://wa.me/5524981375213" className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-600 rounded-full">WhatsApp: (24) 98137-5213</a>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-36 h-36 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-3xl">AD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // CTA Section
 function CTASection() {
   return (
@@ -410,7 +488,9 @@ export default function Sobre() {
       <ProblemSection />
       <SolutionSection />
       <PhilosophySection />
+      <NumbersSection />
       <CommitmentSection />
+      <TeamSection />
       <CTASection />
     </>
   )

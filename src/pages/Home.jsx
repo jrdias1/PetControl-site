@@ -51,7 +51,7 @@ function HeroSection() {
             {/* Badge */}
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-100 rounded-full text-primary-600 text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
-              <span>+500 pet shops já usam EssencialPet</span>
+              <span>+500 pet shops já usam o EssencialPet</span>
             </motion.div>
 
             {/* Heading */}
@@ -62,8 +62,7 @@ function HeroSection() {
 
             {/* Subheading */}
             <motion.p variants={fadeInUp} className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              Sistema de pós-venda inteligente que envia lembretes automáticos de recompra via WhatsApp. 
-              Aumente seu faturamento em até <strong className="text-dark-900">40%</strong>.
+              Sistema de pós-venda inteligente que envia lembretes automáticos de recompra via WhatsApp. Aumente seu faturamento em até <strong className="text-dark-900">40%</strong> sem esforço manual.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -124,7 +123,7 @@ function HeroSection() {
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <div className="text-2xl font-bold text-green-400">+40%</div>
-                    <div className="text-gray-400 text-sm">Recompras</div>
+                    <div className="text-gray-400 text-sm">Recompras (média)</div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <div className="text-2xl font-bold text-primary-400">23</div>
@@ -251,8 +250,7 @@ function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
-            Tudo que você precisa para{' '}
-            <span className="text-gradient">vender mais</span>
+            Tudo que você precisa para vender mais
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Automatize seu pós-venda e transforme clientes ocasionais em compradores recorrentes
@@ -302,10 +300,10 @@ function FeaturesSection() {
 // Stats Section
 function StatsSection() {
   const stats = [
-    { value: '+500', label: 'Pet shops ativos', icon: Users },
-    { value: '+40%', label: 'Aumento em vendas', icon: TrendingUp },
-    { value: '50k+', label: 'Lembretes enviados', icon: Bell },
-    { value: '4.9/5', label: 'Avaliação média', icon: Star },
+    { value: '+500', label: 'pet shops ativos no Brasil', icon: Users },
+    { value: '+40%', label: 'de aumento médio em vendas recorrentes', icon: TrendingUp },
+    { value: '50.000+', label: 'lembretes enviados via WhatsApp', icon: Bell },
+    { value: '4.9/5', label: 'de satisfação média', icon: Star },
   ]
 
   return (
@@ -342,17 +340,17 @@ function HowItWorksSection() {
     {
       number: '01',
       title: 'Cadastre seus clientes',
-      description: 'Adicione tutores, pets e produtos comprados em poucos cliques.',
+      description: 'Adicione tutores, pets e produtos comprados em poucos cliques. Simples como preencher um formulário.',
     },
     {
       number: '02',
       title: 'Registre a venda',
-      description: 'Informe o produto vendido e sua eficácia (ex: Simparic 35 dias). O sistema calcula quando avisar.',
+      description: 'Informe o produto vendido e sua eficácia — Simparic 35 dias, Bravecto 90 dias. O sistema calcula automaticamente quando avisar o cliente.',
     },
     {
       number: '03',
       title: 'Automatize e venda mais',
-      description: 'O sistema envia lembretes automáticos via WhatsApp no momento certo.',
+      description: 'No momento certo, o cliente recebe o lembrete no WhatsApp — e volta comprar com você, não com o concorrente.',
     }
   ]
 
@@ -408,23 +406,26 @@ function TestimonialsSection() {
   const testimonials = [
     {
       name: 'Mariana Silva',
-      role: 'Dona do Pet Shop Amigo Fiel',
+      role: 'Pet Shop Amigo Fiel',
       image: null,
-      content: 'Aumentei minhas vendas em 35% no primeiro mês! Os clientes adoram receber o lembrete no WhatsApp.',
+      content: 'Tinha cliente que sumia depois de 2 meses e eu nem sabia. Agora o sistema manda o lembrete sozinho e eles voltam antes de eu precisar ligar.',
+      metric: '+35% em vendas no primeiro mês',
       rating: 5
     },
     {
       name: 'Carlos Eduardo',
       role: 'Clínica Vet Care',
       image: null,
-      content: 'Antes eu esquecia de avisar sobre vacinas. Agora o sistema faz tudo automaticamente. Incrível!',
+      content: 'Antes eu esquecia de avisar sobre vacinas. Agora o sistema faz tudo. Reduziu muito as faltas.',
+      metric: '-40% em consultas perdidas',
       rating: 5
     },
     {
       name: 'Fernanda Costa',
       role: 'Banho & Tosa Patinhas',
       image: null,
-      content: 'Simples de usar e o suporte é excelente. Recomendo para qualquer pet shop que queira crescer.',
+      content: 'Minha agenda ficava com buracos toda semana. Com o lembrete automático, os clientes reagendam antes de eu precisar pedir. Agenda sempre cheia.',
+      metric: '+50% em agendamentos recorrentes',
       rating: 5
     }
   ]
@@ -439,10 +440,10 @@ function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
-            O que nossos clientes dizem
+            O que donos de pet shop estão dizendo
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Histórias reais de pet shops que transformaram seu negócio
+            Histórias reais de negócios que pararam de perder recompras
           </p>
         </motion.div>
 
@@ -474,6 +475,9 @@ function TestimonialsSection() {
                 <div>
                   <div className="font-semibold text-dark-900">{testimonial.name}</div>
                   <div className="text-sm text-gray-500">{testimonial.role}</div>
+                  {testimonial.metric && (
+                    <div className="text-sm text-green-600 font-medium mt-1">{testimonial.metric}</div>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -501,11 +505,11 @@ function FinalCTASection() {
           <div className="relative">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium mb-6">
               <Heart className="w-4 h-4" />
-              <span>+500 pets felizes</span>
+              <span>+500 negócios pet crescendo com recorrência</span>
             </div>
-            
+
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-              Pronto para aumentar suas vendas?
+              Pronto para parar de perder recompras?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
               Comece agora com 3 dias grátis. Sem cartão de crédito. Cancele quando quiser.

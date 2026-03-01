@@ -73,36 +73,36 @@ function MainFeaturesSection() {
     {
       icon: Bell,
       title: 'Lembretes Automáticos via WhatsApp',
-      description: 'Configure lembretes para antipulgas, vacinas, vermífugos e qualquer produto recorrente. O sistema envia automaticamente no momento certo.',
+      description: 'Nunca mais perca uma recompra por esquecimento. Configure lembretes para antipulgas, vacinas, vermífugos e qualquer produto recorrente — o sistema envia a mensagem certa, para o cliente certo, na hora certa.',
       benefits: [
         'Lembretes personalizados por produto',
         'Envio automático via WhatsApp',
-        'Mensagens customizáveis',
-        'Histórico de envios'
+        'Mensagens customizáveis com o nome do pet',
+        'Histórico completo de envios'
       ],
       color: 'primary'
     },
     {
       icon: Repeat,
       title: 'Aviso Inteligente de Recompra',
-      description: 'Cadastre a eficácia do produto (ex: NexGard 30 dias, Bravecto 90 dias) e o sistema avisa o cliente ANTES de acabar, perguntando se quer comprar outro.',
+      description: 'Cadastre a eficácia de cada produto — NexGard dura 30 dias, Bravecto dura 90 — e o sistema avisa o cliente antes da proteção acabar. Ele se lembra de você antes de procurar o concorrente.',
       benefits: [
-        'Aviso antes da eficácia acabar',
+        'Aviso automático antes da eficácia acabar',
         'Dashboard com próximos vencimentos',
-        'Alertas de clientes inativos',
-        'Relatório de recorrência'
+        'Alertas de clientes inativos há mais de 90 dias',
+        'Relatório de recorrência por produto'
       ],
       color: 'secondary'
     },
     {
       icon: Users,
       title: 'Gestão Completa de Clientes',
-      description: 'Cadastre tutores, pets (nome, raça, idade) e todo o histórico de compras em um único lugar organizado.',
+      description: 'Tutores, pets e todo o histórico de compras em um único lugar — organizado, acessível e sempre atualizado. Chega de planilha perdida ou caderno rasurado.',
       benefits: [
-        'Ficha completa do tutor e pet',
-        'Histórico de compras',
+        'Ficha completa do tutor e do pet.',
+        'Histórico de compras e lembretes enviados',
         'Agenda de próximos avisos',
-        'Busca rápida e filtros'
+        'Busca rápida por nome, pet ou produto'
       ],
       color: 'accent'
     }
@@ -361,6 +361,10 @@ function CTASection() {
               Ver Preços
               <ArrowRight className="w-5 h-5" />
             </Link>
+          </div>
+          <div className="mt-8">
+            <h3 className="text-lg text-white font-semibold">Pronto para aumentar suas vendas?</h3>
+            <p className="text-sm text-white/70">Junte-se a mais de 500 pet shops que já automatizaram seu pós-venda</p>
           </div>
         </motion.div>
       </div>

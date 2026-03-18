@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
-const SITE_URL = 'https://essencialpet.com.br'
+const SITE_URL = 'https://petcontrol.essencialcomunica.com.br'
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`
 
 export default function SEO({
@@ -88,7 +88,7 @@ export const schemas = {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://essencialpet.com.br${item.url}`
+      "item": `https://petcontrol.essencialcomunica.com.br${item.url}`
     }))
   }),
 

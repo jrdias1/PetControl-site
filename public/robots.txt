@@ -1,11 +1,11 @@
 # EssencialPet - Sistema de Pós-Venda para Pet Shops
-# https://essencialpet.com.br
+# https://petcontrol.essencialcomunica.com.br
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://essencialpet.com.br/sitemap.xml
+Sitemap: https://petcontrol.essencialcomunica.com.br/sitemap.xml
 
 # Diretórios públicos
 Allow: /blog/

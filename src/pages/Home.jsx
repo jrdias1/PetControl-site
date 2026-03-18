@@ -29,6 +29,8 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } }
 }
 
+const WA_LINK = 'https://wa.me/5524981375213?text=Olá! Vi o site do EssencialPet e quero saber mais para começar'
+
 // Hero Section
 function HeroSection() {
   return (
@@ -48,24 +50,20 @@ function HeroSection() {
             variants={stagger}
             className="text-center lg:text-left"
           >
-            {/* Badge */}
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-100 rounded-full text-primary-600 text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
               <span>+500 pet shops já usam o EssencialPet</span>
             </motion.div>
 
-            {/* Heading */}
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-dark-900 leading-tight mb-6">
               Transforme clientes em{' '}
               <span className="text-gradient">vendas recorrentes</span>
             </motion.h1>
 
-            {/* Subheading */}
             <motion.p variants={fadeInUp} className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
               Sistema de pós-venda inteligente que envia lembretes automáticos de recompra via WhatsApp. Aumente seu faturamento em até <strong className="text-dark-900">40%</strong> sem esforço manual.
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 to="/demo"
@@ -83,7 +81,6 @@ function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* Trust Badges */}
             <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
@@ -100,91 +97,26 @@ function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Hero Image/Mockup */}
+          {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            {/* Dashboard Mockup */}
-            <div className="relative bg-dark-900 rounded-2xl shadow-2xl overflow-hidden border border-white/10">
-              <div className="p-4 border-b border-white/10 flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-              </div>
-              <div className="p-6 space-y-4">
-                {/* Stats cards mockup */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-white/5 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-white">127</div>
-                    <div className="text-gray-400 text-sm">Clientes ativos</div>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-green-400">+40%</div>
-                    <div className="text-gray-400 text-sm">Recompras (média)</div>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4">
-                    <div className="text-2xl font-bold text-primary-400">23</div>
-                    <div className="text-gray-400 text-sm">Lembretes hoje</div>
-                  </div>
-                </div>
-                {/* Client list mockup */}
-                <div className="bg-white/5 rounded-xl p-4 space-y-3">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="flex items-center gap-4 p-3 bg-white/5 rounded-lg">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold">
-                        {['M', 'R', 'C'][i-1]}
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-white font-medium">{['Max', 'Rex', 'Cacau'][i-1]}</div>
-                        <div className="text-gray-400 text-sm">Antipulga vence em {[3, 7, 2][i-1]} dias</div>
-                      </div>
-                      <button className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-lg">
-                        WhatsApp
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Floating notification */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="absolute -left-8 top-1/4 bg-white rounded-xl shadow-xl p-4 border border-gray-100"
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative rounded-2xl overflow-hidden shadow-2xl group"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 text-green-600" />
-                </div>
-                <div>
-                  <div className="font-medium text-dark-900">WhatsApp enviado!</div>
-                  <div className="text-sm text-gray-500">Lembrete para Max</div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Floating stats */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3, duration: 0.5 }}
-              className="absolute -right-4 bottom-1/4 bg-white rounded-xl shadow-xl p-4 border border-gray-100"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-primary-600" />
-                </div>
-                <div>
-                  <div className="font-medium text-dark-900">+R$ 2.340</div>
-                  <div className="text-sm text-gray-500">Este mês</div>
-                </div>
-              </div>
-            </motion.div>
+              <img
+                src="/criativos/8ccKWS6hulqdJp_BH0U_qh.png"
+                alt="Transforme seu Pet Shop com o EssencialPet"
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+            </a>
           </motion.div>
         </div>
       </div>
@@ -328,6 +260,54 @@ function StatsSection() {
               <div className="text-gray-400">{stat.label}</div>
             </motion.div>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Pain Section
+function PainSection() {
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
+            Você sabe o quanto está{' '}
+            <span className="text-gradient">perdendo todo mês?</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Cada cliente que esquece de recomprar é dinheiro indo para o concorrente — sem você nem perceber.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="rounded-2xl overflow-hidden shadow-xl"
+          >
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="block group relative">
+              <img src="/criativos/Vendas_perdidas_hoje__version_1.png" alt="Vendas perdidas hoje?" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="rounded-2xl overflow-hidden shadow-xl"
+          >
+            <img src="/criativos/O_prejuízo_invisível_no_balcão_version_1.png" alt="O prejuízo invisível no balcão" className="w-full h-auto" />
+          </motion.div>
         </div>
       </div>
     </section>
@@ -492,44 +472,84 @@ function TestimonialsSection() {
 function FinalCTASection() {
   return (
     <section className="py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 rounded-3xl p-8 md:p-12 text-center overflow-hidden"
+          className="relative bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 rounded-3xl overflow-hidden"
         >
-          {/* Background decoration */}
           <div className="absolute inset-0 bg-hero-pattern opacity-10" />
-          
-          <div className="relative">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium mb-6">
-              <Heart className="w-4 h-4" />
-              <span>+500 negócios pet crescendo com recorrência</span>
+
+          <div className="relative grid lg:grid-cols-3">
+            {/* Texto */}
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium mb-6 w-fit">
+                <Heart className="w-4 h-4" />
+                <span>+500 negócios pet crescendo</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 leading-tight">
+                Pronto para parar de perder recompras?
+              </h2>
+              <p className="text-lg text-white/80 mb-8">
+                Comece agora com 3 dias grátis. Sem cartão de crédito. Cancele quando quiser.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/demo"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Agendar Demo Grátis
+                </Link>
+                <Link
+                  to="/preco"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+                >
+                  Ver Preços
+                </Link>
+              </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-              Pronto para parar de perder recompras?
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
-              Comece agora com 3 dias grátis. Sem cartão de crédito. Cancele quando quiser.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/demo"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Agendar Demo Grátis
-              </Link>
-              <Link
-                to="/preco"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
-              >
-                Ver Preços
-              </Link>
-            </div>
+            {/* Criativo 1 */}
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative overflow-hidden group"
+            >
+              <img
+                src="/criativos/Recupere_suas_vendas_agora_version_1.png"
+                alt="Recupere suas vendas agora"
+                className="w-full h-full object-cover"
+                style={{ minHeight: '360px' }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300 flex items-end justify-center pb-6">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 text-green-700 font-bold text-sm shadow-lg">
+                  <MessageCircle className="w-4 h-4" /> Falar no WhatsApp
+                </div>
+              </div>
+            </a>
+
+            {/* Criativo 2 */}
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative overflow-hidden group"
+            >
+              <img
+                src="/criativos/3_sales_you_are_missing_version_2.png"
+                alt="3 vendas que você está perdendo"
+                className="w-full h-full object-cover"
+                style={{ minHeight: '360px' }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300 flex items-end justify-center pb-6">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 text-green-700 font-bold text-sm shadow-lg">
+                  <MessageCircle className="w-4 h-4" /> Falar no WhatsApp
+                </div>
+              </div>
+            </a>
           </div>
         </motion.div>
       </div>
@@ -550,6 +570,7 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <StatsSection />
+      <PainSection />
       <HowItWorksSection />
       <TestimonialsSection />
       <FinalCTASection />

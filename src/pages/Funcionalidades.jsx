@@ -67,6 +67,8 @@ function HeroSection() {
   )
 }
 
+const WA_LINK = 'https://wa.me/5524981375213?text=Olá! Vi o site do EssencialPet e quero saber mais para começar'
+
 // Main Features
 function MainFeaturesSection() {
   const features = [
@@ -80,7 +82,10 @@ function MainFeaturesSection() {
         'Mensagens customizáveis com o nome do pet',
         'Histórico completo de envios'
       ],
-      color: 'primary'
+      color: 'primary',
+      image: '/criativos/9iEBHQdZFni6-PLq4pGkmc.png',
+      imageAlt: 'Recorrência de ração automática via WhatsApp',
+      imageClickable: true
     },
     {
       icon: Repeat,
@@ -92,7 +97,10 @@ function MainFeaturesSection() {
         'Alertas de clientes inativos há mais de 90 dias',
         'Relatório de recorrência por produto'
       ],
-      color: 'secondary'
+      color: 'secondary',
+      image: '/criativos/Fidelização_via_processo_version_1.png',
+      imageAlt: 'Fidelização via processo automatizado',
+      imageClickable: false
     },
     {
       icon: Users,
@@ -104,26 +112,17 @@ function MainFeaturesSection() {
         'Agenda de próximos avisos',
         'Busca rápida por nome, pet ou produto'
       ],
-      color: 'accent'
+      color: 'accent',
+      image: '/criativos/pomelli_image (1).png',
+      imageAlt: 'Notificação de lembrete no celular',
+      imageClickable: false
     }
   ]
 
   const colorClasses = {
-    primary: {
-      bg: 'bg-primary-100',
-      text: 'text-primary-600',
-      border: 'border-primary-200'
-    },
-    secondary: {
-      bg: 'bg-secondary-100',
-      text: 'text-secondary-600',
-      border: 'border-secondary-200'
-    },
-    accent: {
-      bg: 'bg-accent-100',
-      text: 'text-accent-600',
-      border: 'border-accent-200'
-    }
+    primary: { bg: 'bg-primary-100', text: 'text-primary-600', border: 'border-primary-200' },
+    secondary: { bg: 'bg-secondary-100', text: 'text-secondary-600', border: 'border-secondary-200' },
+    accent: { bg: 'bg-accent-100', text: 'text-accent-600', border: 'border-accent-200' }
   }
 
   return (
@@ -158,22 +157,26 @@ function MainFeaturesSection() {
                   ))}
                 </ul>
               </div>
-              <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className={`bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 border ${colorClasses[feature.color].border}`}>
-                  {/* Feature illustration/mockup */}
-                  <div className="aspect-video bg-dark-900 rounded-xl overflow-hidden">
-                    <div className="p-4 h-full flex flex-col">
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-red-500" />
-                        <div className="w-2 h-2 rounded-full bg-yellow-500" />
-                        <div className="w-2 h-2 rounded-full bg-green-500" />
-                      </div>
-                      <div className="flex-1 flex items-center justify-center">
-                        <feature.icon className={`w-20 h-20 ${colorClasses[feature.color].text} opacity-50`} />
+              <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                {feature.imageClickable ? (
+                  <a
+                    href={WA_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-2xl overflow-hidden shadow-xl group relative"
+                  >
+                    <img src={feature.image} alt={feature.imageAlt} className="w-full h-auto" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-end justify-center pb-6">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 text-green-700 font-bold text-sm shadow-lg">
+                        <MessageCircle className="w-4 h-4" /> Falar no WhatsApp
                       </div>
                     </div>
+                  </a>
+                ) : (
+                  <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <img src={feature.image} alt={feature.imageAlt} className="w-full h-auto" />
                   </div>
-                </div>
+                )}
               </div>
             </motion.div>
           ))}

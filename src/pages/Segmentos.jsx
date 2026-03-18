@@ -50,6 +50,8 @@ function HeroSection() {
   )
 }
 
+const WA_LINK = 'https://wa.me/5524981375213?text=Olá! Vi o site do EssencialPet e quero saber mais para começar'
+
 // Segments Grid
 function SegmentsSection() {
   const segments = [
@@ -67,7 +69,8 @@ function SegmentsSection() {
       ],
       stats: { value: '+35%', label: 'em vendas recorrentes' },
       color: 'primary',
-      image: null
+      image: '/criativos/Recupere_suas_vendas_agora_version_1.png',
+      imageAlt: 'Recupere suas vendas agora — Pet Shop'
     },
     {
       icon: Stethoscope,
@@ -83,7 +86,8 @@ function SegmentsSection() {
       ],
       stats: { value: '-40%', label: 'em faltas de consulta' },
       color: 'secondary',
-      image: null
+      image: '/criativos/Pós-venda_que_gera_autoridade_version_2.png',
+      imageAlt: 'Pós-venda que gera autoridade — Clínica Veterinária'
     },
     {
       icon: Scissors,
@@ -99,9 +103,9 @@ function SegmentsSection() {
       ],
       stats: { value: '+50%', label: 'em agendamentos' },
       color: 'accent',
-      image: null
-    }
-    ,
+      image: null,
+      imageAlt: ''
+    },
     {
       icon: Heart,
       title: 'Nutrição Natural & Petiscos',
@@ -116,7 +120,8 @@ function SegmentsSection() {
       ],
       stats: { value: '+40%', label: 'em pedidos recorrentes' },
       color: 'primary',
-      image: null
+      image: '/criativos/9iEBHQdZFni6-PLq4pGkmc.png',
+      imageAlt: 'Recorrência de ração automática'
     },
     {
       icon: Bell,
@@ -132,7 +137,8 @@ function SegmentsSection() {
       ],
       stats: { value: '-35%', label: 'em perda de clientes' },
       color: 'secondary',
-      image: null
+      image: null,
+      imageAlt: ''
     }
   ]
 
@@ -210,29 +216,32 @@ function SegmentsSection() {
 
               {/* Visual */}
               <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                <div className={`${colorClasses[segment.color].bg} rounded-3xl p-8 border ${colorClasses[segment.color].border}`}>
-                  {/* Mockup/Illustration */}
-                  <div className="aspect-[4/3] bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="h-full flex flex-col">
-                      {/* Header */}
-                      <div className="bg-dark-900 p-4">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-red-500" />
-                          <div className="w-2 h-2 rounded-full bg-yellow-500" />
-                          <div className="w-2 h-2 rounded-full bg-green-500" />
-                          <span className="ml-4 text-white/60 text-sm">{segment.title}</span>
+                {segment.image ? (
+                  <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <img src={segment.image} alt={segment.imageAlt} className="w-full h-auto" />
+                  </div>
+                ) : (
+                  <div className={`${colorClasses[segment.color].bg} rounded-3xl p-8 border ${colorClasses[segment.color].border}`}>
+                    <div className="aspect-[4/3] bg-white rounded-2xl shadow-lg overflow-hidden">
+                      <div className="h-full flex flex-col">
+                        <div className="bg-dark-900 p-4">
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-red-500" />
+                            <div className="w-2 h-2 rounded-full bg-yellow-500" />
+                            <div className="w-2 h-2 rounded-full bg-green-500" />
+                            <span className="ml-4 text-white/60 text-sm">{segment.title}</span>
+                          </div>
                         </div>
-                      </div>
-                      {/* Content area */}
-                      <div className="flex-1 p-6 flex items-center justify-center bg-gray-50">
-                        <div className="text-center">
-                          <segment.icon className={`w-16 h-16 mx-auto mb-4 ${colorClasses[segment.color].stat}`} />
-                          <p className="text-gray-500">Dashboard para {segment.title}</p>
+                        <div className="flex-1 p-6 flex items-center justify-center bg-gray-50">
+                          <div className="text-center">
+                            <segment.icon className={`w-16 h-16 mx-auto mb-4 ${colorClasses[segment.color].stat}`} />
+                            <p className="text-gray-500">Dashboard para {segment.title}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </motion.div>
           ))}

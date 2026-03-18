@@ -103,8 +103,8 @@ function SegmentsSection() {
       ],
       stats: { value: '+50%', label: 'em agendamentos' },
       color: 'accent',
-      image: null,
-      imageAlt: ''
+      image: '/criativos/BANHO E TOSA.png',
+      imageAlt: 'Lembretes automáticos de banho e tosa via WhatsApp'
     },
     {
       icon: Heart,
@@ -137,8 +137,8 @@ function SegmentsSection() {
       ],
       stats: { value: '-35%', label: 'em perda de clientes' },
       color: 'secondary',
-      image: null,
-      imageAlt: ''
+      image: '/criativos/farmacia.png',
+      imageAlt: 'O remédio não pode acabar — Farmácia Veterinária'
     }
   ]
 

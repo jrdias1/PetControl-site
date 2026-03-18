@@ -513,7 +513,6 @@ export default function Segmentos() {
       <UseCasesSection />
       <TestimonialsSection />
       <CredibilitySection />
-      <CTASection />
     </>
   )
 }
